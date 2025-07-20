@@ -39,7 +39,7 @@ const getSignalBadge = (signal = 0) => {
 // Composant Legend
 const Legend = ({ darkMode, toggleDarkMode }) => {
   const map = useMap();
-  
+
   useEffect(() => {
     if (!map) return;
 
@@ -65,6 +65,7 @@ const Legend = ({ darkMode, toggleDarkMode }) => {
               🌙
             </button>
           </div>
+</div>
         </div>
       `;
       return div;
@@ -89,7 +90,7 @@ const MapStations = ({ onBack }) => {
   const [userPosition, setUserPosition] = useState(null);
   const [stations, setStations] = useState([]);
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -248,7 +249,7 @@ const MapStations = ({ onBack }) => {
           center={[userPosition.lat, userPosition.lng]}
           zoom={15}
           className="h-full w-full z-0"
-          style={{ 
+          style={{
             backgroundColor: darkMode ? '#0f172a' : '#f8fafc',
             zIndex: 0
           }}
@@ -287,7 +288,7 @@ const MapStations = ({ onBack }) => {
                   fillOpacity: 0.7,
                 }}
               >
-                <Popup className={`${darkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'} border ${darkMode ? 'border-gray-700' : 'border-gray-200'} rounded-lg p-3 shadow-lg`}>
+               <Popup className={`${darkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'} border ${darkMode ? 'border-gray-700' : 'border-gray-200'} rounded-lg p-3 shadow-lg`}>
                   <div className={`font-bold mb-2 ${darkMode ? 'text-white' : 'text-gray-800'}`}>
                     {station.nom || `Station #${idx + 1}`}
                   </div>
