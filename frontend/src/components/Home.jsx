@@ -21,7 +21,7 @@ const Home = ({ onStart }) => {
         <div className="flex items-center space-x-2">
           <HiOutlineWifi className="text-blue-400 text-2xl" />
           <span className=" font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
-            RadioScanPro
+            Mi-Surveillance
           </span>
         </div>
         
@@ -173,7 +173,7 @@ const Home = ({ onStart }) => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
               <HiOutlineWifi className="text-blue-400 text-xl" />
-              <span className="font-bold text-lg">RadioScanPro</span>
+              <span className="font-bold text-lg">Mi-Surveillance</span>
             </div>
             <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-4 md:mb-0">
               <a href="#" className="hover:text-blue-300 transition">Accueil</a>
