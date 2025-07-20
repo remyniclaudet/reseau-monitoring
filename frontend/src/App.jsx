@@ -1,13 +1,17 @@
-import { useState } from 'react'
-import './App.css'
-import MapStations from './components/MapStations';
+import { useState } from "react";
+import Home from "./components/Home";
+import MapStations from "./components/MapStations";
+import "./App.css";
 
 function App() {
-  return (
-    <div className="min-h-screen bg-gray-100 p-4">
-      <h1 className="text-2xl font-bold text-center text-blue-800">Tableau de surveillance du réseau mobile</h1>
-      <MapStations />
+  const [showMap, setShowMap] = useState(false);
+
+  return showMap ? (
+    <div className="relative w-full h-full bg-gray-900">
+      <MapStations onBack={() => setShowMap(false)} />
     </div>
+  ) : (
+    <Home onStart={() => setShowMap(true)} />
   );
 }
 
